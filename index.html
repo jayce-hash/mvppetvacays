@@ -12,10 +12,11 @@
 <link rel="canonical" href="https://mvppetvacays.netlify.app/">
 
 <!-- Favicons -->
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=3">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=3">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png?v=3">
+<link rel="shortcut icon" href="favicon.ico?v=3">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
 <meta name="theme-color" content="#18294A">
 <meta name="robots" content="index, follow">
 <meta name="geo.region" content="US-TX">
@@ -129,11 +130,25 @@
     letter-spacing:-0.01em; color:var(--navy);
   }
   .wordmark b{ color:var(--navy); font-weight:600; }
-  .nav-call{
-    font-size:.9rem; font-weight:600; color:var(--paper);
-    background:var(--red); padding:9px 20px; border-radius:999px; transition:opacity .18s ease;
+  /* nav: mobile dropdown by default */
+  .nav{
+    display:flex; flex-direction:column; align-items:stretch; gap:0;
+    position:absolute; top:100%; left:0; right:0;
+    background:var(--paper); border-bottom:1px solid var(--navy-14);
+    padding:6px 26px 16px; box-shadow:0 14px 22px rgba(24,41,74,.08);
+    opacity:0; visibility:hidden; transform:translateY(-8px);
+    transition:opacity .2s ease, transform .2s ease, visibility .2s;
   }
-  .nav-call:hover{ opacity:.9; }
+  .nav a{ padding:14px 2px; font-size:1.05rem; font-weight:500; color:var(--navy); border-bottom:1px solid var(--navy-08); position:relative; }
+  .nav a:last-child{ border-bottom:0; }
+  .topbar.open .nav{ opacity:1; visibility:visible; transform:translateY(0); }
+
+  .hamburger{ display:block; width:40px; height:40px; padding:8px; border:0; background:transparent; cursor:pointer; }
+  .hamburger span{ display:block; height:2px; width:100%; background:var(--navy); border-radius:2px; transition:transform .25s ease, opacity .2s ease; }
+  .hamburger span + span{ margin-top:5px; }
+  .hamburger[aria-expanded="true"] span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+  .hamburger[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+  .hamburger[aria-expanded="true"] span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
 
   /* ---------- Hero / heritage lockup ---------- */
   .hero{ padding:44px 0 52px; text-align:center; }
@@ -290,6 +305,17 @@
     section{ padding:82px 0; }
     .hero{ min-height:calc(92vh - 64px); display:flex; flex-direction:column; justify-content:center; padding:36px 0 60px; }
     .btn{ padding:15px 34px; font-size:1.02rem; }
+
+    /* desktop nav: inline section titles */
+    .hamburger{ display:none; }
+    .nav{
+      position:static; flex-direction:row; align-items:center; gap:30px;
+      background:transparent; border:0; box-shadow:none; padding:0;
+      opacity:1; visibility:visible; transform:none;
+    }
+    .nav a{ padding:6px 0; border-bottom:0; font-size:.92rem; letter-spacing:.01em; }
+    .nav a::after{ content:""; position:absolute; left:0; right:0; bottom:0; height:1.5px; background:var(--red); transform:scaleX(0); transform-origin:left; transition:transform .2s ease; }
+    .nav a:hover::after, .nav a:focus-visible::after{ transform:scaleX(1); }
   }
 
   @media (prefers-reduced-motion:reduce){ *{ transition:none !important; scroll-behavior:auto; } }
@@ -300,7 +326,16 @@
 <header class="topbar">
   <div class="wrap topbar-inner">
     <a class="wordmark" href="#top">MVP <b>Pet Vacays</b></a>
-    <a class="nav-call" href="tel:8173121555">Call or Text</a>
+    <nav id="site-nav" class="nav" aria-label="Primary">
+      <a href="#about">Meet Mimi</a>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="hamburger" id="navBtn" aria-label="Open menu" aria-controls="site-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -418,7 +453,7 @@
     </div>
   </section>
 
-  <section id="details" class="panel">
+  <section id="faq" class="panel">
     <div class="wrap">
       <div class="sec-head">
         <span class="eyebrow">Good to Know</span>
@@ -473,6 +508,24 @@
     </div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('navBtn'),
+      bar=document.querySelector('.topbar'),
+      nav=document.getElementById('site-nav');
+  if(!btn||!bar||!nav) return;
+  function close(){ bar.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+  btn.addEventListener('click',function(e){
+    e.stopPropagation();
+    var open=bar.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open?'true':'false');
+  });
+  nav.addEventListener('click',function(e){ if(e.target.tagName==='A') close(); });
+  document.addEventListener('click',function(e){ if(bar.classList.contains('open') && !bar.contains(e.target)) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+})();
+</script>
 
 </body>
 </html>
