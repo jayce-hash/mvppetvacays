@@ -108,7 +108,7 @@
     font-family:'Fraunces', serif; font-weight:600; font-size:1.15rem;
     letter-spacing:-0.01em; color:var(--navy);
   }
-  .wordmark b{ color:var(--red); font-weight:600; }
+  .wordmark b{ color:var(--navy); font-weight:600; }
   .nav-call{
     font-size:.9rem; font-weight:600; color:var(--paper);
     background:var(--red); padding:9px 20px; border-radius:999px; transition:opacity .18s ease;
@@ -116,7 +116,7 @@
   .nav-call:hover{ opacity:.9; }
 
   /* ---------- Hero / heritage lockup ---------- */
-  .hero{ padding:70px 0 60px; text-align:center; }
+  .hero{ padding:58px 0 50px; text-align:center; }
   .hero .eyebrow{ display:block; margin-bottom:30px; }
 
   .lockup .mvp{
@@ -148,7 +148,7 @@
   .link-arrow{ font-weight:600; color:var(--navy); border-bottom:1.5px solid var(--red); padding-bottom:2px; }
 
   /* ---------- Sections ---------- */
-  section{ padding:66px 0; scroll-margin-top:80px; }
+  section{ padding:58px 0; scroll-margin-top:80px; }
   .panel{ background:var(--panel); }
   .sec-head{ margin-bottom:44px; }
   .sec-head .eyebrow{ display:block; margin-bottom:14px; }
@@ -211,6 +211,9 @@
   .prow .amt small{ font-family:'Inter',sans-serif; font-size:.78rem; font-weight:500; color:var(--navy-55); }
   .price-card.dark .prow .amt small{ color:var(--paper-72); }
 
+  .cardnote{ margin-top:auto; padding-top:24px; font-size:.88rem; line-height:1.55; color:var(--navy-55); }
+  .price-card.dark .cardnote{ color:var(--paper-72); }
+
   .price-extra{ margin-top:24px; display:flex; flex-direction:column; gap:6px; }
   .price-extra .walk{
     font-size:1rem; color:var(--navy-72);
@@ -253,8 +256,8 @@
     .price-grid{ grid-template-columns:1fr 1fr; gap:24px; }
     .gtk{ grid-template-columns:1fr 1fr; column-gap:56px; }
     .gtk .row{ grid-template-columns:1fr; }
-    section{ padding:92px 0; }
-    .hero{ padding:96px 0 78px; }
+    section{ padding:82px 0; }
+    .hero{ padding:80px 0 54px; }
   }
 
   @media (prefers-reduced-motion:reduce){ *{ transition:none !important; scroll-behavior:auto; } }
@@ -286,6 +289,8 @@
       </div>
     </div>
   </section>
+
+  <div class="wrap"><div class="rule"></div></div>
 
   <section id="about">
     <div class="wrap">
@@ -359,6 +364,7 @@
             <span class="label">6 Days / Nights or More</span>
             <span class="amt">$100</span>
           </div>
+          <p class="cardnote">Feeding and walks morning and evening, kept to your pet's normal routine.</p>
         </div>
 
         <div class="price-card dark">
@@ -369,6 +375,7 @@
             <span class="label">Per Day</span>
             <span class="amt">$100<small>&nbsp;/ day</small></span>
           </div>
+          <p class="cardnote">Overnight company so your pet is never alone, plus morning care before you're home.</p>
         </div>
       </div>
 
