@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Primary SEO -->
+<title>MVP Pet Vacays & Day Care | Fairview Meadows Pet Sitter | Mary Valenti-Pannell</title>
+<meta name="description" content="Personalized pet sitting, vacay stays, and dog walking in the Fairview Meadows neighborhood. Skip the kennel — your pet stays home, happy, and cared for by Mimi. Call or text 817-312-1555.">
+<meta name="keywords" content="pet sitter Fairview Meadows, dog walker near me, pet vacay care, dog boarding alternative, cat sitter, MVP Pet Vacays, Mary Valenti-Pannell">
+<meta name="author" content="Mary Valenti-Pannell">
+<link rel="canonical" href="https://mvppetvacays.netlify.app/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="MVP Pet Vacays & Day Care | For Your Most Valuable Pet">
+<meta property="og:description" content="Personalized pet sitting, vacay stays, and dog walking in the Fairview Meadows neighborhood. Your pet stays home, comfortable, and cared for.">
+<meta property="og:url" content="https://mvppetvacays.netlify.app/">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MVP Pet Vacays & Day Care">
+<meta name="twitter:description" content="Personalized pet sitting, vacay stays, and dog walking in the Fairview Meadows neighborhood.">
+
+<!-- Local Business structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "MVP Pet Vacays & Day Care",
+  "alternateName": "MVP Pet Vacays",
+  "description": "Personalized pet sitting, vacay stays, and dog walking for the Fairview Meadows neighborhood.",
+  "telephone": "+18173121555",
+  "priceRange": "$$",
+  "areaServed": { "@type": "Place", "name": "Fairview Meadows" },
+  "founder": { "@type": "Person", "name": "Mary Valenti-Pannell" }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Caveat:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --sky:      #BFE3F5;
+    --sky-soft: #E9F5FB;
+    --navy:     #1C2B4A;
+    --navy-deep:#14203A;
+    --red:      #D4432A;
+    --red-deep: #B23621;
+    --cream:    #FBF5EA;
+    --white:    #FFFFFF;
+    --ink:      #253147;
+    --ink-soft: #55617A;
+    --line:     #E7DECB;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+
+  body{
+    background: var(--cream);
+    color: var(--ink);
+    font-family:'Nunito', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  a{ color:inherit; text-decoration:none; }
+
+  .wrap{ max-width:1120px; margin:0 auto; padding:0 24px; }
+
+  h1,h2,h3{ font-family:'Baloo 2', sans-serif; color:var(--navy); line-height:1.1; }
+  .script{ font-family:'Caveat', cursive; font-weight:700; }
+
+  /* ---------- The one brand mark ---------- */
+  .paw{ display:inline-block; fill: currentColor; }
+
+  /* ---------- Sticky header ---------- */
+  .topbar{
+    position:sticky; top:0; z-index:50;
+    background: rgba(251,245,234,0.92);
+    backdrop-filter: blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .topbar-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    height:62px;
+  }
+  .wordmark{
+    display:flex; align-items:center; gap:9px;
+    font-family:'Baloo 2', sans-serif; font-weight:800;
+    color:var(--navy); font-size:1.05rem; letter-spacing:-0.01em;
+  }
+  .wordmark .paw{ width:24px; height:24px; color:var(--red); }
+  .wordmark span{ color:var(--red); }
+  .topbar .call-pill{
+    background:var(--red); color:#fff;
+    font-family:'Baloo 2', sans-serif; font-weight:700; font-size:.95rem;
+    padding:9px 18px; border-radius:999px;
+    display:inline-flex; align-items:center; gap:7px;
+  }
+  .topbar .call-pill .paw{ width:15px; height:15px; }
+
+  /* ---------- Hero ---------- */
+  header.hero{
+    background: linear-gradient(180deg, var(--sky) 0%, var(--sky-soft) 68%, var(--cream) 100%);
+    position:relative; overflow:hidden;
+    padding:56px 0 44px;
+  }
+  .cloud{ position:absolute; background:#fff; border-radius:100px; opacity:.9; }
+  .cloud::before,.cloud::after{ content:""; position:absolute; background:#fff; border-radius:100px; }
+  .c1{ width:96px; height:34px; top:44px; left:6%; }
+  .c1::before{ width:52px; height:52px; top:-26px; left:8px; }
+  .c1::after{ width:38px; height:38px; top:-16px; left:46px; }
+  .c2{ width:72px; height:26px; top:96px; right:8%; }
+  .c2::before{ width:40px; height:40px; top:-20px; left:6px; }
+  .c2::after{ width:28px; height:28px; top:-12px; left:36px; }
+
+  .hero-inner{
+    position:relative; z-index:2;
+    display:flex; flex-direction:column; align-items:center;
+    text-align:center; gap:16px;
+  }
+  .badge{
+    display:inline-flex; align-items:center; gap:8px;
+    background:#fff; border:2px solid var(--navy); color:var(--navy);
+    font-family:'Baloo 2', sans-serif; font-weight:700; font-size:13px;
+    padding:7px 16px; border-radius:999px;
+  }
+  .badge .paw{ width:15px; height:15px; color:var(--red); }
+
+  h1{ font-weight:800; font-size:clamp(2.4rem,7.5vw,4rem); }
+  h1 .accent{ color:var(--red); }
+
+  .tagline{
+    font-size:clamp(1.7rem,5vw,2.4rem);
+    color:var(--red-deep);
+    line-height:1;
+  }
+  .hero-note{ max-width:480px; font-size:1.03rem; color:var(--ink-soft); }
+
+  .hero-ctas{ display:flex; gap:13px; flex-wrap:wrap; justify-content:center; margin-top:6px; }
+
+  .btn{
+    display:inline-flex; align-items:center; gap:9px;
+    font-family:'Baloo 2', sans-serif; font-weight:700; font-size:1.05rem;
+    padding:14px 28px; border-radius:999px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn .paw{ width:17px; height:17px; }
+  .btn:active{ transform:scale(.96); }
+  .btn-primary{ background:var(--red); color:#fff; box-shadow:0 5px 0 var(--red-deep); }
+  .btn-primary:hover{ transform:translateY(2px); box-shadow:0 3px 0 var(--red-deep); }
+  .btn-ghost{ background:#fff; color:var(--navy); border:2px solid var(--navy); }
+
+  /* ---------- Paw divider ---------- */
+  .divider{ display:flex; justify-content:center; gap:32px; padding:26px 0 8px; }
+  .divider .paw{ width:16px; height:16px; }
+  .divider .paw:nth-child(odd){ color:var(--red); }
+  .divider .paw:nth-child(even){ color:var(--navy); transform:translateY(7px); }
+
+  /* ---------- Sections ---------- */
+  section{ padding:52px 0; position:relative; scroll-margin-top:78px; }
+
+  .eyebrow{
+    display:inline-block; font-family:'Baloo 2', sans-serif;
+    font-size:12px; letter-spacing:.09em; text-transform:uppercase;
+    color:var(--red); font-weight:700;
+    background:#FBE3DC; padding:5px 14px; border-radius:999px; margin-bottom:14px;
+  }
+  h2{ font-weight:700; font-size:clamp(1.7rem,4vw,2.2rem); margin-bottom:20px; }
+  p{ color:var(--ink-soft); }
+
+  /* ---------- About ---------- */
+  .about-grid{ display:grid; grid-template-columns:1fr; gap:26px; align-items:center; }
+  .emblem{
+    width:132px; height:132px; margin:0 auto;
+    border-radius:50%; background:var(--sky);
+    border:3px solid var(--navy);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:5px 5px 0 var(--red);
+  }
+  .emblem .paw{ width:66px; height:66px; color:var(--navy); }
+  .about-card{
+    background:var(--white); border-radius:20px; padding:28px;
+    border:2px solid var(--line);
+  }
+  .about-card .script{ color:var(--red); font-size:1.9rem; display:block; margin-bottom:4px; }
+  .about-card p+p{ margin-top:12px; }
+  .about-card strong{ color:var(--navy); }
+
+  /* ---------- Services ---------- */
+  .services{ display:grid; grid-template-columns:1fr; gap:18px; }
+  .service{
+    background:var(--white); border:2px solid var(--line);
+    border-radius:18px; padding:24px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .service:hover{ transform:translateY(-4px); box-shadow:0 10px 22px rgba(28,43,74,.12); }
+  .service .mark{
+    width:48px; height:48px; border-radius:14px; background:var(--sky);
+    display:flex; align-items:center; justify-content:center; margin-bottom:14px;
+  }
+  .service .mark .paw{ width:24px; height:24px; color:var(--red); }
+  .service h3{ font-size:1.18rem; margin-bottom:6px; }
+  .service p{ font-size:.96rem; }
+
+  /* ---------- Pricing ---------- */
+  .pricing-grid{ display:grid; grid-template-columns:1fr; gap:18px; }
+  .price-card{
+    background:var(--navy); color:#fff; border-radius:20px; padding:28px;
+    position:relative; overflow:hidden;
+  }
+  .price-card.featured{ background:var(--red); }
+  .price-card .paw-bg{
+    position:absolute; right:-8px; bottom:-14px;
+    width:96px; height:96px; color:#fff; opacity:.12;
+  }
+  .price-card .paw-bg .paw{ width:100%; height:100%; }
+  .price-card h3{ color:#fff; font-size:1.2rem; margin-bottom:4px; }
+  .price-tag{ font-family:'Baloo 2', sans-serif; font-weight:800; font-size:2rem; margin:8px 0 6px; color:var(--sky); }
+  .price-card.featured .price-tag{ color:#fff; }
+  .price-card p{ color:#E7ECF5; font-size:.92rem; position:relative; z-index:1; }
+  .price-note{
+    margin-top:20px; text-align:center; font-size:1rem; color:var(--ink-soft);
+    background:#fff; border:2px dashed var(--red); border-radius:14px; padding:14px 18px;
+  }
+
+  /* ---------- Alert ---------- */
+  .alert{
+    background:var(--sky); color:var(--navy); text-align:center;
+    padding:20px 24px; border-radius:16px; border:3px solid var(--navy);
+    font-family:'Baloo 2', sans-serif; font-weight:700; font-size:1.08rem;
+    display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap;
+  }
+  .alert .paw{ width:20px; height:20px; color:var(--red); }
+
+  /* ---------- Footer ---------- */
+  footer{ background:var(--navy); color:#fff; padding:58px 0 40px; text-align:center; position:relative; overflow:hidden; }
+  footer .eyebrow{ background:rgba(255,255,255,.12); color:var(--sky); }
+  footer h2{ color:#fff; }
+  footer p{ color:#C4CCDD; }
+  .call-btn{
+    display:inline-flex; align-items:center; gap:11px; margin-top:20px;
+    background:var(--red); color:#fff; font-family:'Baloo 2', sans-serif; font-weight:800;
+    padding:16px 34px; border-radius:999px; font-size:1.25rem; box-shadow:0 5px 0 var(--red-deep);
+  }
+  .call-btn:active{ transform:translateY(3px); box-shadow:0 2px 0 var(--red-deep); }
+  .call-btn .paw{ width:22px; height:22px; }
+  .call-sub{ margin-top:16px; font-size:14px; }
+  .fine{ margin-top:28px; font-size:13px; color:#8592A8; }
+  .foot-paws{ display:flex; justify-content:center; gap:22px; margin-bottom:26px; opacity:.5; }
+  .foot-paws .paw{ width:15px; height:15px; color:var(--sky); }
+  .foot-paws .paw:nth-child(even){ transform:translateY(6px); }
+
+  /* ---------- Desktop ---------- */
+  @media (min-width:780px){
+    .about-grid{ grid-template-columns:200px 1fr; gap:40px; }
+    .services{ grid-template-columns:repeat(3,1fr); }
+    .pricing-grid{ grid-template-columns:repeat(3,1fr); }
+    section{ padding:72px 0; }
+    .hero-inner{ gap:20px; }
+  }
+  @media (min-width:1000px){ .wrap{ padding:0 40px; } }
+
+  @media (prefers-reduced-motion:reduce){
+    *{ transition:none !important; scroll-behavior:auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== single reusable paw mark ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="paw" viewBox="0 0 64 64">
+    <ellipse cx="20" cy="18" rx="7" ry="9"/>
+    <ellipse cx="44" cy="18" rx="7" ry="9"/>
+    <ellipse cx="9"  cy="36" rx="6" ry="8"/>
+    <ellipse cx="55" cy="36" rx="6" ry="8"/>
+    <path d="M32 30c-9 0-16 7-16 15 0 6 5 9 10 7 3-1 5-2 6-2s3 1 6 2c5 2 10-1 10-7 0-8-7-15-16-15z"/>
+  </symbol>
+</svg>
+
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="wordmark" href="#top">
+      <svg class="paw"><use href="#paw"/></svg>
+      MVP Pet <span>Vacays</span>
+    </a>
+    <a class="call-pill" href="tel:8173121555">
+      <svg class="paw"><use href="#paw"/></svg>
+      Call or Text
+    </a>
+  </div>
+</div>
+
+<header class="hero" id="top">
+  <div class="cloud c1" aria-hidden="true"></div>
+  <div class="cloud c2" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <span class="badge">
+      <svg class="paw"><use href="#paw"/></svg>
+      Fairview Meadows Neighborhood
+    </span>
+    <h1>MVP Pet <span class="accent">Vacays</span><br>& Day Care</h1>
+    <p class="tagline script">For your most valuable pet!</p>
+    <p class="hero-note">Let your vacation be your pet's vacation too. Skip the dog parks, kennels, and germy waiting rooms. Your pet stays comfy at home with Mimi.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="tel:8173121555"><svg class="paw"><use href="#paw"/></svg>Call or Text</a>
+      <a class="btn btn-ghost" href="#pricing">See Pricing</a>
+    </div>
+  </div>
+</header>
+
+<div class="divider" aria-hidden="true">
+  <svg class="paw"><use href="#paw"/></svg>
+  <svg class="paw"><use href="#paw"/></svg>
+  <svg class="paw"><use href="#paw"/></svg>
+  <svg class="paw"><use href="#paw"/></svg>
+  <svg class="paw"><use href="#paw"/></svg>
+</div>
+
+<main>
+
+  <section id="about">
+    <div class="wrap">
+      <span class="eyebrow">Meet Your Sitter</span>
+      <h2>Hi, I'm Mimi</h2>
+      <div class="about-grid">
+        <div class="emblem"><svg class="paw"><use href="#paw"/></svg></div>
+        <div class="about-card">
+          <span class="script">So nice to meet you!</span>
+          <p><strong>Mary Valenti-Pannell</strong>, known to friends and neighbors as Mimi, offers personalized pet sitting and vacay care limited to the <strong>Fairview Meadows neighborhood</strong>.</p>
+          <p>Referrals available upon request. Every pet gets treated like my own: comfortable, close to home, and never mixed in with a kennel full of strangers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <span class="eyebrow">What I Offer</span>
+      <h2>Care plans made for your pet</h2>
+      <div class="services">
+        <div class="service">
+          <div class="mark"><svg class="paw"><use href="#paw"/></svg></div>
+          <h3>Personalized Care Plans</h3>
+          <p>Every pet gets a routine built around what they actually need: feeding, medication, playtime, and company.</p>
+        </div>
+        <div class="service">
+          <div class="mark"><svg class="paw"><use href="#paw"/></svg></div>
+          <h3>Vacay Stays</h3>
+          <p>Your pet stays home while you're away. No kennels, no exposure to other animals, no extra stress.</p>
+        </div>
+        <div class="service">
+          <div class="mark"><svg class="paw"><use href="#paw"/></svg></div>
+          <h3>Dog Walking</h3>
+          <p>Now offering weekday walks, booked separately from vacay stays. Great for busy schedules.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="wrap">
+      <span class="eyebrow">Rates</span>
+      <h2>Pricing</h2>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <div class="paw-bg"><svg class="paw"><use href="#paw"/></svg></div>
+          <h3>Day Care Visit</h3>
+          <div class="price-tag">$__</div>
+          <p>What's included: feeding, playtime, potty breaks, visit length.</p>
+        </div>
+        <div class="price-card featured">
+          <div class="paw-bg"><svg class="paw"><use href="#paw"/></svg></div>
+          <h3>Vacay Stay (per night)</h3>
+          <div class="price-tag">$__</div>
+          <p>What's included: overnight care, photo updates, extra-pet pricing.</p>
+        </div>
+        <div class="price-card">
+          <div class="paw-bg"><svg class="paw"><use href="#paw"/></svg></div>
+          <h3>Dog Walk</h3>
+          <div class="price-tag">$__</div>
+          <p>Walk length (20 or 30 min) and how many days a week.</p>
+        </div>
+      </div>
+      <p class="price-note script" style="font-size:1.35rem;">Placeholder rates. Send me your numbers and I'll drop them in.</p>
+    </div>
+  </section>
+
+  <section id="booking">
+    <div class="wrap">
+      <div class="alert">
+        <svg class="paw"><use href="#paw"/></svg>
+        Summer vacays are booking fast. Reach out soon to lock in your dates!
+        <svg class="paw"><use href="#paw"/></svg>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="foot-paws" aria-hidden="true">
+      <svg class="paw"><use href="#paw"/></svg>
+      <svg class="paw"><use href="#paw"/></svg>
+      <svg class="paw"><use href="#paw"/></svg>
+    </div>
+    <span class="eyebrow">Get In Touch</span>
+    <h2>Call or text for scheduling and pricing</h2>
+    <a class="call-btn" href="tel:8173121555"><svg class="paw"><use href="#paw"/></svg>817-312-1555</a>
+    <p class="call-sub">Mary Valenti-Pannell &middot; MVP Pet Vacays &amp; Day Care</p>
+    <p class="fine">Serving the Fairview Meadows neighborhood only.</p>
+  </div>
+</footer>
+
+</body>
+</html>
