@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mvppetvacays.netlify.app/sitemap.xml

@@ -17,6 +17,9 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#18294A">
+<meta name="robots" content="index, follow">
+<meta name="geo.region" content="US-TX">
+<meta name="geo.placename" content="Fairview Meadows, Bedford, Texas">
 
 <!-- Open Graph -->
 <meta property="og:type" content="business.business">
@@ -42,13 +45,30 @@
   "name": "MVP Pet Vacays & Day Care",
   "alternateName": "MVP Pet Vacays",
   "description": "Personalized in-home pet sitting, overnight care, and dog walking for the Fairview Meadows neighborhood.",
+  "url": "https://mvppetvacays.netlify.app/",
+  "image": "https://mvppetvacays.netlify.app/og-image.png",
   "telephone": "+18173121555",
   "priceRange": "$$",
-  "areaServed": { "@type": "Place", "name": "Fairview Meadows" },
+  "areaServed": { "@type": "Place", "name": "Fairview Meadows, Bedford, Texas" },
+  "serviceType": ["Pet sitting", "Overnight pet care", "Dog walking"],
   "founder": { "@type": "Person", "name": "Mary Valenti" },
-  "offers": [
+  "makesOffer": [
     { "@type": "Offer", "name": "Basic Package (day visits)", "price": "50", "priceCurrency": "USD" },
     { "@type": "Offer", "name": "Overnight Package", "price": "100", "priceCurrency": "USD" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Which pets do you care for?", "acceptedAnswer": { "@type": "Answer", "text": "Dogs, cats, and other household pets. Up to four pets for day visits and up to five for overnight stays." } },
+    { "@type": "Question", "name": "Which areas do you serve?", "acceptedAnswer": { "@type": "Answer", "text": "The Fairview Meadows neighborhood. The service area is kept small so every pet gets close, personal attention. Referrals available on request." } },
+    { "@type": "Question", "name": "Do you board pets at your home?", "acceptedAnswer": { "@type": "Answer", "text": "No. All care happens in your home, where your pet is most comfortable, including overnight stays." } },
+    { "@type": "Question", "name": "What do I need to provide?", "acceptedAnswer": { "@type": "Answer", "text": "Your pet's food and any medications, along with instructions for feeding, schedule, or special needs." } },
+    { "@type": "Question", "name": "How does pricing work?", "acceptedAnswer": { "@type": "Answer", "text": "Rates depend on the number of pets, length of stay, and whether you need overnight care. Day visits start at $50 and overnight stays are $100 per day." } },
+    { "@type": "Question", "name": "Can we meet before booking?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Mimi is happy to set up a visit beforehand so you and your pet can meet her and see how everyone gets along." } }
   ]
 }
 </script>
@@ -119,7 +139,9 @@
   .hero{ padding:44px 0 52px; text-align:center; }
   .hero .eyebrow{ display:block; margin-bottom:34px; }
 
+  .lockup{ margin:0; }
   .lockup .mvp{
+    display:block;
     font-family:'Fraunces', serif; font-weight:600;
     font-size:clamp(4.8rem,19vw,12rem); line-height:.82; letter-spacing:-0.03em; color:var(--navy);
   }
@@ -222,11 +244,21 @@
   .price-extra .walk strong{ color:var(--navy); }
   .fineprint{ margin-top:18px; font-size:.86rem; color:var(--navy-55); line-height:1.7; }
 
-  /* ---------- Good to know ---------- */
-  .gtk{ display:grid; grid-template-columns:1fr; gap:0; border-top:1px solid var(--navy-14); }
-  .gtk .row{ padding:26px 0; border-bottom:1px solid var(--navy-14); display:grid; grid-template-columns:1fr; gap:6px; }
-  .gtk .row h3{ font-size:1.15rem; }
-  .gtk .row p{ color:var(--navy-72); font-size:1rem; max-width:64ch; }
+  /* ---------- FAQ ---------- */
+  .faq{ border-top:1px solid var(--navy-14); }
+  .faq details{ border-bottom:1px solid var(--navy-14); }
+  .faq summary{
+    list-style:none; cursor:pointer; position:relative;
+    padding:24px 48px 24px 0;
+    font-family:'Fraunces', serif; font-size:1.2rem; color:var(--navy);
+  }
+  .faq summary::-webkit-details-marker{ display:none; }
+  .faq summary::after{
+    content:"+"; position:absolute; right:4px; top:50%; transform:translateY(-50%);
+    font-family:'Inter', sans-serif; font-weight:500; font-size:1.6rem; color:var(--red); line-height:1;
+  }
+  .faq details[open] summary::after{ content:"\2212"; }
+  .faq details p{ padding:0 0 26px; color:var(--navy-72); font-size:1.04rem; max-width:70ch; }
 
   /* ---------- Booking line ---------- */
   .booking{ text-align:center; padding:60px 0; }
@@ -254,8 +286,7 @@
     .svc{ grid-template-columns:220px 1fr; gap:40px; align-items:baseline; padding:34px 0; }
     .svc .tag{ padding-top:6px; }
     .price-grid{ grid-template-columns:1fr 1fr; gap:24px; }
-    .gtk{ grid-template-columns:1fr 1fr; column-gap:56px; }
-    .gtk .row{ grid-template-columns:1fr; }
+    .faq summary{ font-size:1.32rem; }
     section{ padding:82px 0; }
     .hero{ min-height:calc(92vh - 64px); display:flex; flex-direction:column; justify-content:center; padding:36px 0 60px; }
     .btn{ padding:15px 34px; font-size:1.02rem; }
@@ -278,10 +309,10 @@
   <section class="hero">
     <div class="wrap">
       <span class="eyebrow">In-Home Pet Care &middot; Fairview Meadows</span>
-      <div class="lockup">
-        <h1 class="mvp">MVP</h1>
-        <div class="sub"><span>Pet Vacays &amp; Day Care</span></div>
-      </div>
+      <h1 class="lockup">
+        <span class="mvp">MVP</span>
+        <span class="sub"><span>Pet Vacays &amp; Day Care</span></span>
+      </h1>
       <p class="promise serif-i">For Your Most Valuable Pet.</p>
       <p class="lead">Let your vacation be your pet's vacation too. Your pet stays home in its own space, cared for one-on-one. No kennels, no crowded parks, no exposure to other animals.</p>
       <div class="hero-ctas">
@@ -391,25 +422,33 @@
     <div class="wrap">
       <div class="sec-head">
         <span class="eyebrow">Good to Know</span>
-        <h2>How It Works</h2>
+        <h2>Common Questions</h2>
       </div>
-      <div class="gtk">
-        <div class="row">
-          <h3>Meals &amp; Medications</h3>
-          <p>You provide your pet's food and any medications, along with instructions for special needs or a daily schedule.</p>
-        </div>
-        <div class="row">
-          <h3>In Your Home</h3>
-          <p>Care happens where your pet is most comfortable. Overnight stays take place in your home, not a boarding facility.</p>
-        </div>
-        <div class="row">
-          <h3>Meet First</h3>
-          <p>Happy to arrange a visit beforehand so you and your pet can meet me and see how everyone gets along.</p>
-        </div>
-        <div class="row">
-          <h3>Flexible Pricing</h3>
-          <p>Rates flex with the number of pets, the length of the stay, and whether overnight care is needed.</p>
-        </div>
+      <div class="faq">
+        <details open>
+          <summary>Which pets do you care for?</summary>
+          <p>Dogs, cats, and other household pets. Up to four pets for day visits and up to five for overnight stays.</p>
+        </details>
+        <details>
+          <summary>Which areas do you serve?</summary>
+          <p>The Fairview Meadows neighborhood. I keep my service area small so every pet gets close, personal attention. Referrals available on request.</p>
+        </details>
+        <details>
+          <summary>Do you board pets at your home?</summary>
+          <p>No. All care happens in your home, where your pet is most comfortable, including overnight stays.</p>
+        </details>
+        <details>
+          <summary>What do I need to provide?</summary>
+          <p>Your pet's food and any medications, along with instructions for feeding, schedule, or special needs.</p>
+        </details>
+        <details>
+          <summary>How does pricing work?</summary>
+          <p>Rates depend on the number of pets, length of stay, and whether you need overnight care. Day visits start at $50 and overnight stays are $100 per day.</p>
+        </details>
+        <details>
+          <summary>Can we meet before I book?</summary>
+          <p>Yes. I'm happy to set up a visit beforehand so you and your pet can meet me and see how we get along.</p>
+        </details>
       </div>
     </div>
   </section>
